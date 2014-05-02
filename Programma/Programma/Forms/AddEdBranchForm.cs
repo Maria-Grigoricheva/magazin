@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace Programma
 {
-    public partial class Form1 : Form
+    public partial class AddEdBranchForm : Form
     {
-        public Form1()
+        public AddEdBranchForm()
         {
             InitializeComponent();
-        }
-
-        private void btnBranch_Click(object sender, EventArgs e)
-        {
-            BranchFormcs branchForm = new BranchFormcs();
-            branchForm.Show();
         }
     }
 }
