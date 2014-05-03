@@ -93,6 +93,7 @@
             this.dgvManager.Location = new System.Drawing.Point(12, 49);
             this.dgvManager.Name = "dgvManager";
             this.dgvManager.ReadOnly = true;
+            this.dgvManager.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvManager.Size = new System.Drawing.Size(760, 501);
             this.dgvManager.TabIndex = 6;
             // 
