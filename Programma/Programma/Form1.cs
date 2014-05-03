@@ -33,5 +33,11 @@ namespace Programma
             managerForm.Show();
         }
 
+        private void btnProv_Click(object sender, EventArgs e)
+        {
+            ProvForm provForm = new ProvForm();
+            provForm.Show();
+        }
+
     }
 }

@@ -110,6 +110,7 @@
             this.btnProv.TabIndex = 2;
             this.btnProv.Text = "Просмотр поставщиков";
             this.btnProv.UseVisualStyleBackColor = true;
+            this.btnProv.Click += new System.EventHandler(this.btnProv_Click);
             // 
             // btnManager
             // 
