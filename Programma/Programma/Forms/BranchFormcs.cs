@@ -32,6 +32,8 @@ namespace Programma
             if (form.ShowDialog() == DialogResult.OK)
             {
                 branchTableAdapter.Update(this.magazinBDDataSet.Branch);
+                this.branchTableAdapter.Fill(this.magazinBDDataSet.Branch);
+                dgvBranch.CurrentCell = dgvBranch.Rows[branchBindingSource.Count - 1].Cells[2];
             }
                 
         }
@@ -44,6 +46,9 @@ namespace Programma
             if (form.ShowDialog() == DialogResult.OK)
             {
                 branchTableAdapter.Update(magazinBDDataSet.Branch);
+                int index = dgvBranch.CurrentRow.Index;
+                this.branchTableAdapter.Fill(this.magazinBDDataSet.Branch);
+                dgvBranch.CurrentCell = dgvBranch.Rows[index].Cells[2];
             }
 
         }
