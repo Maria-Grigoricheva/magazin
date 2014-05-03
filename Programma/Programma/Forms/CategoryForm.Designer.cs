@@ -74,7 +74,10 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
 >>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======

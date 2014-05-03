@@ -34,8 +34,13 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvProv = new System.Windows.Forms.DataGridView();
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.provisionerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.magazinBDDataSet = new Programma.magazinBDDataSet();
+=======
+            this.magazinBDDataSet = new Programma.magazinBDDataSet();
+            this.provisionerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             this.magazinBDDataSet = new Programma.magazinBDDataSet();
             this.provisionerBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -48,8 +53,13 @@
             this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProv)).BeginInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).BeginInit();
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).BeginInit();
@@ -110,11 +120,14 @@
             this.dgvProv.TabIndex = 9;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
             // provisionerBindingSource
             // 
             this.provisionerBindingSource.DataMember = "Provisioner";
             this.provisionerBindingSource.DataSource = this.magazinBDDataSet;
             // 
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
 >>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             // magazinBDDataSet
@@ -123,12 +136,18 @@
             this.magazinBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             // provisionerBindingSource
             // 
             this.provisionerBindingSource.DataMember = "Provisioner";
             this.provisionerBindingSource.DataSource = this.magazinBDDataSet;
             // 
+<<<<<<< HEAD
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+=======
 >>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             // provisionerTableAdapter
             // 
@@ -145,10 +164,16 @@
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
             this.nameDataGridViewTextBoxColumn.ReadOnly = true;
             this.nameDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             this.nameDataGridViewTextBoxColumn.HeaderText = "name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
@@ -159,10 +184,16 @@
             // 
             this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.addressDataGridViewTextBoxColumn.HeaderText = "Адрес";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
             this.addressDataGridViewTextBoxColumn.ReadOnly = true;
             this.addressDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             this.addressDataGridViewTextBoxColumn.HeaderText = "address";
             this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
@@ -173,10 +204,16 @@
             // 
             this.agentDataGridViewTextBoxColumn.DataPropertyName = "agent";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.agentDataGridViewTextBoxColumn.HeaderText = "ФИО представителя";
             this.agentDataGridViewTextBoxColumn.Name = "agentDataGridViewTextBoxColumn";
             this.agentDataGridViewTextBoxColumn.ReadOnly = true;
             this.agentDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.agentDataGridViewTextBoxColumn.HeaderText = "agent";
+            this.agentDataGridViewTextBoxColumn.Name = "agentDataGridViewTextBoxColumn";
+            this.agentDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             this.agentDataGridViewTextBoxColumn.HeaderText = "agent";
             this.agentDataGridViewTextBoxColumn.Name = "agentDataGridViewTextBoxColumn";
@@ -187,10 +224,16 @@
             // 
             this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             this.emailDataGridViewTextBoxColumn.ReadOnly = true;
             this.emailDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             this.emailDataGridViewTextBoxColumn.HeaderText = "email";
             this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
@@ -212,8 +255,13 @@
             this.Load += new System.EventHandler(this.ProvForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProv)).EndInit();
 <<<<<<< HEAD
+<<<<<<< HEAD
             ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).EndInit();
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
             ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).EndInit();

@@ -30,6 +30,7 @@
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnOk = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -105,6 +106,8 @@
 =======
 =======
 >>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Text = "AddEdCategoryForm";
@@ -112,6 +115,9 @@
 
         #endregion
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+=======
 >>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
 =======
 >>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
