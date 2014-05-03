@@ -18,14 +18,40 @@ namespace Programma
 
         private void ProvForm_Load(object sender, EventArgs e)
         {
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "magazinBDDataSet.Provisioner". При необходимости она может быть перемещена или удалена.
+            this.provisionerTableAdapter.Fill(this.magazinBDDataSet.Provisioner);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            AddEdProvForm form = new AddEdProvForm();
+            provisionerBindingSource.AddNew();
+
+            form.provisionerBindingSource.DataSource = provisionerBindingSource;
+            form.provisionerBindingSource.Position = provisionerBindingSource.Position;
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                provisionerTableAdapter.Update(this.magazinBDDataSet.Provisioner);
+                this.provisionerTableAdapter.Fill(this.magazinBDDataSet.Provisioner);
+                dgvProv.CurrentCell = dgvProv.Rows[provisionerBindingSource.Count - 1].Cells[2];
+            }
         }
 
         private void btnEdition_Click(object sender, EventArgs e)
         {
+            AddEdProvForm form = new AddEdProvForm();
+
+            form.provisionerBindingSource.DataSource = provisionerBindingSource;
+            form.provisionerBindingSource.Position = provisionerBindingSource.Position;
+
+            if (form.ShowDialog() == DialogResult.OK)
+            {
+                provisionerTableAdapter.Update(this.magazinBDDataSet.Provisioner);
+                int index = dgvProv.CurrentRow.Index;
+                this.provisionerTableAdapter.Fill(this.magazinBDDataSet.Provisioner);
+                dgvProv.CurrentCell = dgvProv.Rows[index].Cells[2];
+            }
         }
     }
 }

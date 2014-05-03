@@ -100,6 +100,7 @@
             this.btnCategory.TabIndex = 3;
             this.btnCategory.Text = "Просмотр категорий";
             this.btnCategory.UseVisualStyleBackColor = true;
+            this.btnCategory.Click += new System.EventHandler(this.btnCategory_Click);
             // 
             // btnProv
             // 

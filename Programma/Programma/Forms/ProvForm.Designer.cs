@@ -28,11 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnDelete = new System.Windows.Forms.Button();
             this.btnEdition = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.dgvProv = new System.Windows.Forms.DataGridView();
+<<<<<<< HEAD
+            this.provisionerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.magazinBDDataSet = new Programma.magazinBDDataSet();
+=======
+            this.magazinBDDataSet = new Programma.magazinBDDataSet();
+            this.provisionerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+            this.provisionerTableAdapter = new Programma.magazinBDDataSetTableAdapters.ProvisionerTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.agentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvProv)).BeginInit();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).BeginInit();
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             this.SuspendLayout();
             // 
             // btnDelete
@@ -71,13 +92,110 @@
             // 
             this.dgvProv.AllowUserToAddRows = false;
             this.dgvProv.AllowUserToDeleteRows = false;
+            this.dgvProv.AutoGenerateColumns = false;
             this.dgvProv.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvProv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvProv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.agentDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.dgvProv.DataSource = this.provisionerBindingSource;
             this.dgvProv.Location = new System.Drawing.Point(12, 49);
             this.dgvProv.Name = "dgvProv";
             this.dgvProv.ReadOnly = true;
+            this.dgvProv.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvProv.Size = new System.Drawing.Size(760, 501);
             this.dgvProv.TabIndex = 9;
+            // 
+<<<<<<< HEAD
+            // provisionerBindingSource
+            // 
+            this.provisionerBindingSource.DataMember = "Provisioner";
+            this.provisionerBindingSource.DataSource = this.magazinBDDataSet;
+            // 
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+            // magazinBDDataSet
+            // 
+            this.magazinBDDataSet.DataSetName = "magazinBDDataSet";
+            this.magazinBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+<<<<<<< HEAD
+=======
+            // provisionerBindingSource
+            // 
+            this.provisionerBindingSource.DataMember = "Provisioner";
+            this.provisionerBindingSource.DataSource = this.magazinBDDataSet;
+            // 
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+            // provisionerTableAdapter
+            // 
+            this.provisionerTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+<<<<<<< HEAD
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Название";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.nameDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+<<<<<<< HEAD
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Адрес";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            this.addressDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+            // 
+            // agentDataGridViewTextBoxColumn
+            // 
+            this.agentDataGridViewTextBoxColumn.DataPropertyName = "agent";
+<<<<<<< HEAD
+            this.agentDataGridViewTextBoxColumn.HeaderText = "ФИО представителя";
+            this.agentDataGridViewTextBoxColumn.Name = "agentDataGridViewTextBoxColumn";
+            this.agentDataGridViewTextBoxColumn.ReadOnly = true;
+            this.agentDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.agentDataGridViewTextBoxColumn.HeaderText = "agent";
+            this.agentDataGridViewTextBoxColumn.Name = "agentDataGridViewTextBoxColumn";
+            this.agentDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+<<<<<<< HEAD
+            this.emailDataGridViewTextBoxColumn.HeaderText = "E-mail";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            this.emailDataGridViewTextBoxColumn.Width = 150;
+=======
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             // 
             // ProvForm
             // 
@@ -93,6 +211,13 @@
             this.Text = "Просмотр поставщиков";
             this.Load += new System.EventHandler(this.ProvForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvProv)).EndInit();
+<<<<<<< HEAD
+            ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
+=======
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.provisionerBindingSource)).EndInit();
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             this.ResumeLayout(false);
 
         }
@@ -103,5 +228,13 @@
         private System.Windows.Forms.Button btnEdition;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.DataGridView dgvProv;
+        public magazinBDDataSet magazinBDDataSet;
+        public System.Windows.Forms.BindingSource provisionerBindingSource;
+        public magazinBDDataSetTableAdapters.ProvisionerTableAdapter provisionerTableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn agentDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
     }
 }
