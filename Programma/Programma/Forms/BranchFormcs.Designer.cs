@@ -163,6 +163,7 @@
             this.Controls.Add(this.btnAdd);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "BranchFormcs";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Просмотр филиалов";
             this.Load += new System.EventHandler(this.BranchFormcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBranch)).EndInit();

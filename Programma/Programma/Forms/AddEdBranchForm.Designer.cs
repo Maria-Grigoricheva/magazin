@@ -174,6 +174,7 @@
             this.Controls.Add(this.txtName);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddEdBranchForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление/Редактирование филиала";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddEdBranchForm_FormClosing);
             this.Load += new System.EventHandler(this.AddEdBranchForm_Load);
