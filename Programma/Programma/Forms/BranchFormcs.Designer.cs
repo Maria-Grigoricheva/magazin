@@ -28,11 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnEdition = new System.Windows.Forms.Button();
             this.btnDelete = new System.Windows.Forms.Button();
             this.dgvBranch = new System.Windows.Forms.DataGridView();
+            this.magazinBDDataSet = new Programma.magazinBDDataSet();
+            this.branchBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.branchTableAdapter = new Programma.magazinBDDataSetTableAdapters.BranchTableAdapter();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fioDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBranch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAdd
@@ -43,6 +54,7 @@
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Добавить";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnEdition
             // 
@@ -52,6 +64,7 @@
             this.btnEdition.TabIndex = 1;
             this.btnEdition.Text = "Редактировать";
             this.btnEdition.UseVisualStyleBackColor = true;
+            this.btnEdition.Click += new System.EventHandler(this.btnEdition_Click);
             // 
             // btnDelete
             // 
@@ -64,12 +77,68 @@
             // 
             // dgvBranch
             // 
+            this.dgvBranch.AllowUserToAddRows = false;
+            this.dgvBranch.AllowUserToDeleteRows = false;
+            this.dgvBranch.AutoGenerateColumns = false;
             this.dgvBranch.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dgvBranch.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBranch.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.addressDataGridViewTextBoxColumn,
+            this.fioDataGridViewTextBoxColumn,
+            this.emailDataGridViewTextBoxColumn});
+            this.dgvBranch.DataSource = this.branchBindingSource;
             this.dgvBranch.Location = new System.Drawing.Point(12, 41);
             this.dgvBranch.Name = "dgvBranch";
+            this.dgvBranch.ReadOnly = true;
             this.dgvBranch.Size = new System.Drawing.Size(760, 509);
             this.dgvBranch.TabIndex = 3;
+            // 
+            // magazinBDDataSet
+            // 
+            this.magazinBDDataSet.DataSetName = "magazinBDDataSet";
+            this.magazinBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // branchBindingSource
+            // 
+            this.branchBindingSource.DataMember = "Branch";
+            this.branchBindingSource.DataSource = this.magazinBDDataSet;
+            // 
+            // branchTableAdapter
+            // 
+            this.branchTableAdapter.ClearBeforeFill = true;
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "id";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "name";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "address";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            // 
+            // fioDataGridViewTextBoxColumn
+            // 
+            this.fioDataGridViewTextBoxColumn.DataPropertyName = "fio";
+            this.fioDataGridViewTextBoxColumn.HeaderText = "fio";
+            this.fioDataGridViewTextBoxColumn.Name = "fioDataGridViewTextBoxColumn";
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
             // 
             // BranchFormcs
             // 
@@ -82,7 +151,10 @@
             this.Controls.Add(this.btnAdd);
             this.Name = "BranchFormcs";
             this.Text = "Просмотр филиалов";
+            this.Load += new System.EventHandler(this.BranchFormcs_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvBranch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branchBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -93,5 +165,13 @@
         private System.Windows.Forms.Button btnEdition;
         private System.Windows.Forms.Button btnDelete;
         private System.Windows.Forms.DataGridView dgvBranch;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn addressDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fioDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn emailDataGridViewTextBoxColumn;
+        public magazinBDDataSet magazinBDDataSet;
+        public System.Windows.Forms.BindingSource branchBindingSource;
+        public magazinBDDataSetTableAdapters.BranchTableAdapter branchTableAdapter;
     }
 }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtName = new System.Windows.Forms.TextBox();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtFio = new System.Windows.Forms.TextBox();
@@ -38,10 +39,16 @@
             this.label4 = new System.Windows.Forms.Label();
             this.btnOk = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
+            this.magazinBDDataSet = new Programma.magazinBDDataSet();
+            this.branchBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.branchTableAdapter = new Programma.magazinBDDataSetTableAdapters.BranchTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtName
             // 
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.branchBindingSource, "name", true));
             this.txtName.Location = new System.Drawing.Point(150, 12);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(332, 20);
@@ -49,6 +56,7 @@
             // 
             // txtAddress
             // 
+            this.txtAddress.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.branchBindingSource, "address", true));
             this.txtAddress.Location = new System.Drawing.Point(150, 38);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(332, 20);
@@ -56,6 +64,7 @@
             // 
             // txtFio
             // 
+            this.txtFio.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.branchBindingSource, "fio", true));
             this.txtFio.Location = new System.Drawing.Point(150, 64);
             this.txtFio.Name = "txtFio";
             this.txtFio.Size = new System.Drawing.Size(332, 20);
@@ -63,6 +72,7 @@
             // 
             // txtEmail
             // 
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.branchBindingSource, "email", true));
             this.txtEmail.Location = new System.Drawing.Point(150, 90);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(332, 20);
@@ -124,6 +134,20 @@
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
+            // magazinBDDataSet
+            // 
+            this.magazinBDDataSet.DataSetName = "magazinBDDataSet";
+            this.magazinBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // branchBindingSource
+            // 
+            this.branchBindingSource.DataMember = "Branch";
+            this.branchBindingSource.DataSource = this.magazinBDDataSet;
+            // 
+            // branchTableAdapter
+            // 
+            this.branchTableAdapter.ClearBeforeFill = true;
+            // 
             // AddEdBranchForm
             // 
             this.AcceptButton = this.btnOk;
@@ -145,6 +169,10 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "AddEdBranchForm";
             this.Text = "Добавление/Редактирование филиала";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddEdBranchForm_FormClosing);
+            this.Load += new System.EventHandler(this.AddEdBranchForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.branchBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,5 +190,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnOk;
         private System.Windows.Forms.Button btnCancel;
+        public magazinBDDataSet magazinBDDataSet;
+        public System.Windows.Forms.BindingSource branchBindingSource;
+        public magazinBDDataSetTableAdapters.BranchTableAdapter branchTableAdapter;
     }
 }
