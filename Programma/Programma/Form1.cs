@@ -21,5 +21,10 @@ namespace Programma
             BranchFormcs branchForm = new BranchFormcs();
             branchForm.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
