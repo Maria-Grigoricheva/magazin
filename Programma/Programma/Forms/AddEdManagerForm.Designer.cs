@@ -34,14 +34,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.txtFio = new System.Windows.Forms.TextBox();
-            this.cbBranch = new System.Windows.Forms.ComboBox();
-            this.magazinBDDataSet = new Programma.magazinBDDataSet();
             this.managerBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.managerTableAdapter = new Programma.magazinBDDataSetTableAdapters.ManagerTableAdapter();
+            this.magazinBDDataSet = new Programma.magazinBDDataSet();
+            this.cbBranch = new System.Windows.Forms.ComboBox();
             this.branchBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.managerTableAdapter = new Programma.magazinBDDataSetTableAdapters.ManagerTableAdapter();
             this.branchTableAdapter = new Programma.magazinBDDataSetTableAdapters.BranchTableAdapter();
-            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.branchBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@
             this.btnOk.TabIndex = 14;
             this.btnOk.Text = "OK";
             this.btnOk.UseVisualStyleBackColor = true;
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
             // label2
             // 
@@ -95,6 +96,16 @@
             this.txtFio.Size = new System.Drawing.Size(332, 20);
             this.txtFio.TabIndex = 10;
             // 
+            // managerBindingSource
+            // 
+            this.managerBindingSource.DataMember = "Manager";
+            this.managerBindingSource.DataSource = this.magazinBDDataSet;
+            // 
+            // magazinBDDataSet
+            // 
+            this.magazinBDDataSet.DataSetName = "magazinBDDataSet";
+            this.magazinBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
             // cbBranch
             // 
             this.cbBranch.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.managerBindingSource, "branchId", true));
@@ -107,24 +118,14 @@
             this.cbBranch.TabIndex = 16;
             this.cbBranch.ValueMember = "id";
             // 
-            // magazinBDDataSet
-            // 
-            this.magazinBDDataSet.DataSetName = "magazinBDDataSet";
-            this.magazinBDDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // managerBindingSource
-            // 
-            this.managerBindingSource.DataMember = "Manager";
-            this.managerBindingSource.DataSource = this.magazinBDDataSet;
-            // 
-            // managerTableAdapter
-            // 
-            this.managerTableAdapter.ClearBeforeFill = true;
-            // 
             // branchBindingSource
             // 
             this.branchBindingSource.DataMember = "Branch";
             this.branchBindingSource.DataSource = this.magazinBDDataSet;
+            // 
+            // managerTableAdapter
+            // 
+            this.managerTableAdapter.ClearBeforeFill = true;
             // 
             // branchTableAdapter
             // 
@@ -150,8 +151,8 @@
             this.Text = "Добавить/Редактировать менеджера";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddEdManagerForm_FormClosing);
             this.Load += new System.EventHandler(this.AddEdManagerForm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.managerBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.magazinBDDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.branchBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

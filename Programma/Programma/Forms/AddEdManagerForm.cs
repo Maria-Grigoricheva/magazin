@@ -32,5 +32,10 @@ namespace Programma
             else
                 managerBindingSource.CancelEdit();
         }
+
+        private void btnOk_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
