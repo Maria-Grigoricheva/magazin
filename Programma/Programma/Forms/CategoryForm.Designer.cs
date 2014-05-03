@@ -71,6 +71,19 @@
             this.dgvCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCategory.Location = new System.Drawing.Point(12, 49);
             this.dgvCategory.Name = "dgvCategory";
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+<<<<<<< HEAD
+            this.dgvCategory.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
+=======
+>>>>>>> 71c4a41b082a75bedc1ab27644212efc02354df6
             this.dgvCategory.Size = new System.Drawing.Size(760, 501);
             this.dgvCategory.TabIndex = 12;
             // 
